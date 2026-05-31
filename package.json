@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "ladle": "ladle serve"
   },
   "dependencies": {
     "react": "^19.2.6",
@@ -16,22 +17,23 @@
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
+    "@ladle/react": "^5.1.1",
     "@oxc-resolver/binding-win32-x64-msvc": "^11.20.0",
     "@types/node": "^24.12.3",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
-    "@vitejs/plugin-react": "^6.0.1",
+    "@vitejs/plugin-react": "^4.7.0",
     "eslint": "^10.3.0",
     "eslint-plugin-react-hooks": "^7.1.1",
     "eslint-plugin-react-refresh": "^0.5.2",
     "globals": "^17.6.0",
-    "storybook": "^8.6.18",
     "typescript": "~6.0.2",
     "typescript-eslint": "^8.59.2",
-    "vite": "^8.0.12"
+    "vite": "^7.3.3"
   },
   "eslintConfig": {
     "extends": [
+      "plugin:storybook/recommended",
       "plugin:storybook/recommended",
       "plugin:storybook/recommended"
     ]
