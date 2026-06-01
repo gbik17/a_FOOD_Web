@@ -1,0 +1,353 @@
+[
+  {
+    "id": 1,
+    "name": "Greek Salad",
+    "price": 80,
+    "image": "",
+    "category": "desserts",
+    "description": "A refreshing mix of crisp vegetables, feta cheese, olives, and a light Mediterranean dressing.",
+    "tag": "recommend",
+    "stars": 3
+  },
+
+  {
+    "id": 2,
+    "name": "Veg Noodles",
+    "price": 120,
+    "image": "",
+    "category": "desserts",
+    "description": "Stir-fried noodles with fresh vegetables and savory seasonings.",
+    "tag": "recommend",
+    "stars": 2
+  },
+  {
+    "id": 3,
+    "name": "Pasta Italian",
+    "price": 160,
+    "image": "",
+    "category": "desserts",
+    "description": "Classic Italian pasta served with a rich and flavorful homemade sauce.",
+    "tag": "recommend",
+    "stars": 4
+  },
+  {
+    "id": 4,
+    "name": "Chinees Noodles",
+    "price": 120,
+    "image": "",
+    "category": "desserts",
+    "description": "Savory Chinese-style noodles stir-fried with fresh ingredients and aromatic seasonings.",
+    "tag": "recommend",
+    "stars": 2
+  },
+  {
+    "id": 5,
+    "name": "Taccos Bell",
+    "price": 110,
+    "image": "",
+    "category": "desserts",
+    "description": "Delicious tacos packed with flavorful fillings and fresh vegetables.",
+    "tag": "recommend",
+    "stars": 3
+  },
+  {
+    "id": 6,
+    "name": "Chicken Burger",
+    "price": 110,
+    "image": "",
+    "category": "desserts",
+    "description": "Golden crispy chicken served in a soft bun with fresh vegetables.",
+    "tag": "recommend",
+    "stars": 3
+  },
+  {
+    "id": 7,
+    "name": "Fritter",
+    "price": 160,
+    "image": "",
+    "category": "main-course",
+    "description": "Crunchy bite-sized fritters with a flavorful and satisfying texture.",
+    "tag": "featured",
+    "stars": 2
+  },
+  {
+    "id": 8,
+    "name": "Food, Delicatessen, Egg",
+    "price": 160,
+    "image": "",
+    "category": "main-course",
+    "description": "Fresh egg specialties prepared with rich flavors and quality ingredients.",
+    "tag": "featured",
+    "stars": 3
+  },
+  {
+    "id": 9,
+    "name": "Street Sea Food",
+    "price": 100,
+    "image": "",
+    "category": "main-course",
+    "description": "Street-style seafood cooked to perfection with rich and satisfying flavors.",
+    "tag": "featured",
+    "stars": 3
+  },
+  {
+    "id": 10,
+    "name": "Chocolate Muffins",
+    "price": 120,
+    "image": "",
+    "category": "desserts",
+    "description": "Soft and moist chocolate muffins baked to perfection with rich cocoa flavor.",
+    "tag": "new-menu",
+    "stars": 3
+  },
+  {
+    "id": 10,
+    "name": "Cheese Pizza",
+    "price": 140,
+    "image": "",
+    "category": "main-course",
+    "description": "Golden melted cheese layered over a perfectly baked pizza crust.",
+    "tag": "popular",
+    "stars": 4
+  },
+  {
+    "id": 11,
+    "name": "Fried Fish",
+    "price": 230,
+    "image": "",
+    "category": "main-course",
+    "description": "Crispy golden fried fish served with a tender and flavorful interior.",
+    "tag": "popular",
+    "stars": 4
+  },
+  {
+    "id": 12,
+    "name": "Combo Pack",
+    "price": 335,
+    "image": "",
+    "category": "main-course",
+    "description": "Enjoy a delicious mix of popular menu items in one value-packed combo.",
+    "tag": "popular",
+    "stars": 4
+  },
+  {
+    "id": 13,
+    "name": "Chicken Nugget",
+    "price": 80,
+    "image": "",
+    "category": "desserts",
+    "description": "Delicious chicken nuggets fried to golden perfection.",
+    "tag": "popular",
+    "stars": 4
+  },
+  {
+    "id": 15,
+    "name": "Aglio e Olio Pasta",
+    "price": 120,
+    "image": "",
+    "category": "main-course",
+    "description": "Traditional Aglio e Olio pasta featuring rich garlic aroma and savory flavors.",
+    "tag": "popular",
+    "stars": 5
+  },
+  {
+    "id": 16,
+    "name": "Box Meal",
+    "price": 170,
+    "image": "",
+    "category": "desserts",
+    "description": "A carefully selected combination of dishes packed into one delicious meal box.",
+    "tag": "popular",
+    "stars": 4
+  },
+  {
+    "id": 17,
+    "name": "Chicken Steak",
+    "price": 230,
+    "image": "",
+    "category": "main-course",
+    "description": "Tender grilled chicken steak served with rich sauce and savory flavors.",
+    "tag": "new-menu",
+    "stars": 3
+  },
+  {
+    "id": 18,
+    "name": "Oregano Beef",
+    "price": 270,
+    "image": "",
+    "category": "main-course",
+    "description": "Tender beef cooked with aromatic oregano herbs and rich savory seasonings.",
+    "tag": "new-menu",
+    "stars": 3
+  },
+  {
+    "id": 19,
+    "name": "Chicken Lasagna",
+    "price": 120,
+    "image": "",
+    "category": "main-course",
+    "description": "Delicious chicken lasagna layered with rich sauce and melted cheese.",
+    "tag": "featured",
+    "stars": 3
+  },
+  {
+    "id": 20,
+    "name": "Crispy Chicken",
+    "price": 100,
+    "image": "",
+    "category": "main-course",
+    "description": "Golden crispy chicken with a crunchy coating and juicy, tender meat.",
+    "tag": "featured",
+    "stars": 2
+  },
+  {
+    "id": 21,
+    "name": "Bolognese Pasta,",
+    "price": 110,
+    "image": "",
+    "category": "main-course",
+    "description": "Perfectly cooked pasta topped with a hearty and flavorful Bolognese sauce.",
+    "tag": "recommend",
+    "stars": 2
+  },
+  {
+    "id": 22,
+    "name": "Grilled Salmon",
+    "price": 200,
+    "image": "",
+    "category": "main-course",
+    "description": "Fresh salmon fillet grilled to perfection and seasoned with aromatic herbs.",
+    "tag": "popular",
+    "stars": 4
+  },
+  {
+    "id": 23,
+    "name": "Beef Burger",
+    "price": 150,
+    "image": "",
+    "category": "main-course",
+    "description": "Juicy beef patty served in a soft bun with fresh vegetables and savory sauce.",
+    "tag": "recommend",
+    "stars": 3
+  },
+  {
+    "id": 24,
+    "name": "BBQ Chicken Wings",
+    "price": 143,
+    "image": "",
+    "category": "desserts",
+    "description": "Tender chicken wings glazed with smoky barbecue sauce and grilled to perfection.",
+    "tag": "new-menu",
+    "stars": 3
+  },
+  {
+    "id": 25,
+    "name": "Mushroom Risotto",
+    "price": 120,
+    "image": "",
+    "category": "main-course",
+    "description": "Creamy Italian rice cooked with mushrooms and rich parmesan cheese.",
+    "tag": "popular",
+    "stars": 4
+  },
+  {
+    "id": 26,
+    "name": "Chicken Caesar Salad",
+    "price": 150,
+    "image": "",
+    "category": "main-course",
+    "description": "Crisp romaine lettuce topped with grilled chicken, parmesan cheese, and Caesar dressing.",
+    "tag": "featured",
+    "stars": 3
+  },
+  {
+    "id": 27,
+    "name": "Iced Lemon Tea",
+    "price": 45,
+    "image": "",
+    "category": "beverage",
+    "description": "Refreshing black tea blended with fresh lemon and ice.",
+    "tag": "popular",
+    "stars": 4
+  },
+  {
+    "id": 28,
+    "name": "Cappuccino",
+    "price": 55,
+    "image": "",
+    "category": "beverage",
+    "description": "Rich espresso topped with steamed milk and creamy foam.",
+    "tag": "featured",
+    "stars": 3
+  },
+  {
+    "id": 29,
+    "name": "Mango Smoothie",
+    "price": 65,
+    "image": "",
+    "category": "beverage",
+    "description": "Fresh mango blended into a smooth and refreshing drink.",
+    "tag": "new-menu",
+    "stars": 4
+  },
+  {
+    "id": 30,
+    "name": "Chocolate Milkshake",
+    "price": 70,
+    "image": "",
+    "category": "beverage",
+    "description": "Creamy milkshake packed with rich chocolate flavor.",
+    "tag": "featured",
+    "stars": 3
+  },
+  {
+    "id": 31,
+    "name": "Fresh Orange Juice",
+    "price": 50,
+    "image": "",
+    "category": "beverage",
+    "description": "Freshly squeezed orange juice with a naturally sweet taste.",
+    "tag": "recommend",
+    "stars": 4
+  },
+  {
+    "id": 32,
+    "name": "Strawberry Mojito",
+    "price": 60,
+    "image": "",
+    "category": "beverage",
+    "description": "A refreshing blend of strawberry, mint, and sparkling soda.",
+    "tag": "popular",
+    "stars": 4
+  },
+  {
+    "id": 33,
+    "name": "Vanilla Latte",
+    "price": 58,
+    "image": "",
+    "category": "beverage",
+    "description": "Smooth espresso combined with milk and sweet vanilla flavor.",
+    "tag": "recommend",
+    "stars": 3
+  },
+  {
+    "id": 34,
+    "name": "Watermelon Juice",
+    "price": 48,
+    "image": "",
+    "category": "beverage",
+    "description": "Cool and refreshing watermelon juice made from fresh fruit.",
+    "tag": "featured",
+    "stars": 3
+  },
+  {
+    "id": 35,
+    "name": "Caramel Frappé",
+    "price": 75,
+    "image": "",
+    "category": "beverage",
+    "description": "Blended coffee drink with creamy caramel and ice.",
+    "tag": "popular",
+    "stars": 4
+  }
+]
