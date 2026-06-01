@@ -8,7 +8,9 @@ pnpm-debug.log*
 lerna-debug.log*
 
 node_modules
-docs
+docs/*
+!docs/diagrams/
+!docs/diagrams/**
 dist
 dist-ssr
 *.local

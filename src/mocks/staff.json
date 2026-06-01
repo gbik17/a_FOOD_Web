@@ -1,0 +1,206 @@
+[
+  {
+    "id": 1,
+    "name": "Michael Anderson",
+    "department": "kitchen",
+    "position": "Executive Chef",
+    "socialMedia": {
+      "facebook": "@michaelanderson",
+      "x": "@chefmichael",
+      "instagram": "@michael.cooks",
+      "tiktok": "@chefmichael"
+    }
+  },
+  {
+    "id": 2,
+    "name": "Sarah Johnson",
+    "department": "kitchen",
+    "position": "Sous Chef",
+    "socialMedia": {
+      "facebook": "@sarahjohnson",
+      "x": "@soussarah",
+      "instagram": "@sarah.kitchen",
+      "tiktok": "@sarahcooks"
+    }
+  },
+  {
+    "id": 3,
+    "name": "Daniel Brown",
+    "department": "kitchen",
+    "position": "Pastry Chef",
+    "socialMedia": {
+      "facebook": "@danielbrown",
+      "x": "@sweetdaniel",
+      "instagram": "@pastry.dan",
+      "tiktok": "@danbakes"
+    }
+  },
+  {
+    "id": 4,
+    "name": "Emma Wilson",
+    "department": "kitchen",
+    "position": "Chef de Partie",
+    "socialMedia": {
+      "facebook": "@emmawilson",
+      "x": "@emmachef",
+      "instagram": "@emma.cuisine",
+      "tiktok": "@chefemma"
+    }
+  },
+  {
+    "id": 5,
+    "name": "James Carter",
+    "department": "kitchen",
+    "position": "Line Cook",
+    "socialMedia": {
+      "facebook": "@jamescarter",
+      "x": "@linecookjames",
+      "instagram": "@james.grill",
+      "tiktok": "@cookjames"
+    }
+  },
+  {
+    "id": 6,
+    "name": "Olivia Martinez",
+    "department": "barista",
+    "position": "Head Barista",
+    "socialMedia": {
+      "facebook": "@oliviamartinez",
+      "x": "@coffeeolivia",
+      "instagram": "@olivia.barista",
+      "tiktok": "@oliviacoffee"
+    }
+  },
+  {
+    "id": 7,
+    "name": "Ethan Walker",
+    "department": "barista",
+    "position": "Senior Barista",
+    "socialMedia": {
+      "facebook": "@ethanwalker",
+      "x": "@ethanbrews",
+      "instagram": "@ethan.coffee",
+      "tiktok": "@baristaethan"
+    }
+  },
+  {
+    "id": 8,
+    "name": "Sophia Lee",
+    "department": "barista",
+    "position": "Barista",
+    "socialMedia": {
+      "facebook": "@sophialee",
+      "x": "@sophiacoffee",
+      "instagram": "@sophia.brew",
+      "tiktok": "@coffeesophia"
+    }
+  },
+  {
+    "id": 9,
+    "name": "William Harris",
+    "department": "restaurant",
+    "position": "Restaurant Manager",
+    "socialMedia": {
+      "facebook": "@williamharris",
+      "x": "@managerwill",
+      "instagram": "@will.restaurant",
+      "tiktok": "@willmanager"
+    }
+  },
+  {
+    "id": 10,
+    "name": "Ava Thompson",
+    "department": "restaurant",
+    "position": "Supervisor",
+    "socialMedia": {
+      "facebook": "@avathompson",
+      "x": "@ava.supervisor",
+      "instagram": "@ava.service",
+      "tiktok": "@avahost"
+    }
+  },
+  {
+    "id": 11,
+    "name": "Benjamin Clark",
+    "department": "restaurant",
+    "position": "Captain Waiter",
+    "socialMedia": {
+      "facebook": "@benjaminclark",
+      "x": "@captainben",
+      "instagram": "@ben.waiter",
+      "tiktok": "@captainservice"
+    }
+  },
+  {
+    "id": 12,
+    "name": "Mia Rodriguez",
+    "department": "restaurant",
+    "position": "Waitress",
+    "socialMedia": {
+      "facebook": "@miarodriguez",
+      "x": "@miaservice",
+      "instagram": "@mia.waitress",
+      "tiktok": "@miaguestcare"
+    }
+  },
+  {
+    "id": 13,
+    "name": "Lucas White",
+    "department": "restaurant",
+    "position": "Waiter",
+    "socialMedia": {
+      "facebook": "@lucaswhite",
+      "x": "@lucaswaiter",
+      "instagram": "@lucas.service",
+      "tiktok": "@waiterlucas"
+    }
+  },
+  {
+    "id": 14,
+    "name": "Charlotte King",
+    "department": "restaurant",
+    "position": "Hostess",
+    "socialMedia": {
+      "facebook": "@charlotteking",
+      "x": "@hostcharlotte",
+      "instagram": "@charlotte.host",
+      "tiktok": "@welcomecharlotte"
+    }
+  },
+  {
+    "id": 15,
+    "name": "Alexander Scott",
+    "department": "accounting",
+    "position": "Finance Manager",
+    "socialMedia": {
+      "facebook": "@alexanderscott",
+      "x": "@financealex",
+      "instagram": "@alex.finance",
+      "tiktok": "@moneywithalex"
+    }
+  },
+  {
+    "id": 16,
+    "name": "Grace Hall",
+    "department": "accounting",
+    "position": "Senior Accountant",
+    "socialMedia": {
+      "facebook": "@gracehall",
+      "x": "@graceaccounting",
+      "instagram": "@grace.numbers",
+      "tiktok": "@gracefinance"
+    }
+  },
+  {
+    "id": 17,
+    "name": "Henry Young",
+    "department": "accounting",
+    "position": "Accountant",
+    "socialMedia": {
+      "facebook": "@henryyoung",
+      "x": "@henryaccounts",
+      "instagram": "@henry.finance",
+      "tiktok": "@henryledger"
+    }
+  }
+]
