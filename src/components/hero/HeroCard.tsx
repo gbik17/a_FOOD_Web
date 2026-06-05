@@ -2,14 +2,26 @@ import { useState } from "react";
 import "../../styles/heroSection.css";
 import type { Menu } from "../../types/menu";
 
-export default function HeroCard() {
-  const [card, setCard] = useState<Menu[]>([]);
+type HeroCardProps = {
+  menu: Menu;
+};
 
+export default function HeroCard({ menu }: HeroCardProps) {
   return (
-    <div className="hero-mid-card">
-      <article className="card-1-api"></article>
+    <article className="hero-mid-card">
+      <h3>{menu.name}</h3>
+      <p>{menu.description}</p>
+      <span>${menu.price}</span>
+    </article>
 
-      {/* MULAI CODING  DARI SINI, CEK CHAT GPT, SEKARANG INTINYA AMBIL DATA MENUS UNTUK DITAMPILKAN MENJADI CARD DI DASHBOARD HERO SECTION */}
-    </div>
+    // <div className="hero-mid-card">
+    //   {menus.map((menu) => (
+    //     <article key={menu.id} className="card-1-api">
+    //       <h3>{menu.name}</h3>
+    //       <h3>{menu.description}</h3>
+    //       <span>${menu.price}</span>
+    //     </article>
+    //   ))}
+    // </div>
   );
 }
