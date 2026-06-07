@@ -1,28 +1,28 @@
-# chunkArray Utility Function
+# 000 - Chunk Array Utility
 
 ## Overview
 
-At first glance, the `chunkArray()` utility function may look like a simple helper that divides a large array into several smaller arrays. While that statement is technically correct, it does not explain the real reason why this utility was created inside the project.
+The `chunkArray()` utility function exists to solve a UI problem rather than a data storage problem.
 
-The primary purpose of `chunkArray()` is to solve a user interface problem, not a data problem.
+In the Hero Carousel feature, menu data is received as a one-dimensional array:
 
-Inside the Hero Carousel feature, menu data is retrieved from the service layer and filtered based on specific business requirements. After the filtering process is completed, the resulting data still exists as a normal one-dimensional array.
+```ts
+[menu1, menu2, menu3, menu4, menu5, menu6, menu7, menu8, menu9, menu10];
+```
 
-For example:
+However, the Hero Carousel displays data in groups (slides), not as one large collection.
 
-````ts
+Desired structure:
+
+```ts
 [
-  menu1,
-  menu2,
-  menu3,
-  menu4,
-  menu5,
-  menu6,
-  menu7,
-  menu8,
-  menu9,
-  menu10
-]
+  [menu1, menu2, menu3, menu4],
+  [menu5, menu6, menu7, menu8],
+  [menu9, menu10],
+];
+```
+
+The responsibility of `chunkArray()` is transforming a one-dimensional array into a two-dimensional array that matches how the carousel operates.
 
 ---
 
@@ -45,7 +45,7 @@ E --> F["Next Iteration"]
 F --> B
 
 B --> G["Return chunks"]
-````
+```
 
 ---
 
@@ -67,51 +67,28 @@ export function chunkArray<T>(array: T[], size: number): T[][] {
 
 ## Generic Type
 
-The function uses a generic type parameter:
+`<T>` is a Generic Type.
 
-```ts
-<T>
-```
-
-This means the utility is not limited to menu data and can work with any array type.
-
-Examples:
+Instead of limiting the utility to `Menu[]`, the function can work with any array type such as:
 
 ```ts
 chunkArray<number>(numbers, 4);
-
-chunkArray<string>(names, 2);
-
+chunkArray<string>(names, 4);
 chunkArray<Menu>(menus, 4);
+chunkArray<User>(users, 4);
 ```
 
-Because of generics, TypeScript automatically preserves the original array type.
+The utility does not care about the shape of the data. It only reorganizes array positions into groups.
 
 ---
 
 ## Parameters
 
-### array
+### array: T[]
 
-```ts
-array: T[]
-```
+The source data that will be transformed.
 
-The source array that will be divided into smaller groups.
-
-Example:
-
-```ts
-[1, 2, 3, 4, 5, 6, 7, 8];
-```
-
----
-
-### size
-
-```ts
-size: number;
-```
+### size: number
 
 Determines how many items should exist inside each chunk.
 
@@ -123,9 +100,12 @@ size = 4;
 
 Result:
 
-```txt
-[1,2,3,4]
-[5,6,7,8]
+```ts
+[
+  [1, 2, 3, 4],
+  [5, 6, 7, 8],
+  [9, 10],
+];
 ```
 
 ---
@@ -136,190 +116,39 @@ Result:
 T[][]
 ```
 
-The function returns a two-dimensional array.
-
-Example:
+The function transforms:
 
 ```ts
-[
-  [1, 2, 3, 4],
-  [5, 6, 7, 8],
-];
+T[]
 ```
 
-The outer array contains chunks.
+into:
 
-The inner arrays contain grouped items.
+```ts
+T[][]
+```
+
+The outer array represents slides.
+
+The inner arrays represent items inside each slide.
 
 ---
 
 ## Step 1 - Create Result Container
 
-An empty array is prepared to store chunk results.
-
 ```ts
 const chunks: T[][] = [];
 ```
 
-Initial state:
+This variable stores every generated chunk.
 
-```txt
-chunks = []
-```
-
----
-
-## Step 2 - Iterate Through Source Array
-
-The loop moves through the source array using increments based on the chunk size.
-
-```ts
-for (
-  let index = 0;
-  index < array.length;
-  index += size
-)
-```
-
-Example:
-
-```ts
-array.length = 10;
-size = 4;
-```
-
-Loop execution:
-
-```txt
-index = 0
-index = 4
-index = 8
-```
-
-The loop jumps by four positions each iteration.
-
----
-
-## Step 3 - Extract Chunk Data
-
-For each iteration:
-
-```ts
-array.slice(index, index + size);
-```
-
-extracts a portion of the array.
-
----
-
-### First Iteration
-
-```txt
-index = 0
-```
-
-```ts
-array.slice(0, 4);
-```
-
-Result:
-
-```txt
-[1,2,3,4]
-```
-
----
-
-### Second Iteration
-
-```txt
-index = 4
-```
-
-```ts
-array.slice(4, 8);
-```
-
-Result:
-
-```txt
-[5,6,7,8]
-```
-
----
-
-### Third Iteration
-
-```txt
-index = 8
-```
-
-```ts
-array.slice(8, 12);
-```
-
-Result:
-
-```txt
-[9,10]
-```
-
-Even though index `12` does not exist, JavaScript safely returns the remaining elements.
-
----
-
-## Step 4 - Store Chunk
-
-Each chunk is pushed into the result array.
-
-```ts
-chunks.push(array.slice(index, index + size));
-```
-
-Progression:
+Initially:
 
 ```txt
 []
 ```
 
-↓
-
-```txt
-[
-  [1,2,3,4]
-]
-```
-
-↓
-
-```txt
-[
-  [1,2,3,4],
-  [5,6,7,8]
-]
-```
-
-↓
-
-```txt
-[
-  [1,2,3,4],
-  [5,6,7,8],
-  [9,10]
-]
-```
-
----
-
-## Step 5 - Return Final Result
-
-After all iterations are complete:
-
-```ts
-return chunks;
-```
-
-Output:
+After processing:
 
 ```ts
 [
@@ -331,36 +160,181 @@ Output:
 
 ---
 
-## Hero Carousel Example
-
-Inside `HeroSection`:
+## Step 2 - Start the Loop
 
 ```ts
-const recommendMenus = menus.filter((menu) => menu.tag === "recommend");
-
-const slides = chunkArray(recommendMenus, 4);
+for (
+  let index = 0;
+  index < array.length;
+  index += size
+)
 ```
 
-If there are 10 recommended menus:
+The loop moves through the source array and determines where each chunk begins.
 
-```txt
-recommendMenus
+---
 
-[1,2,3,4,5,6,7,8,9,10]
+## Step 3 - Why index += size?
+
+Instead of:
+
+```ts
+index++;
 ```
 
-The result becomes:
+the function uses:
+
+```ts
+index += size;
+```
+
+If:
+
+```ts
+size = 4;
+```
+
+the loop becomes:
 
 ```txt
-slides
+index = 0
+index = 4
+index = 8
+```
 
+Each iteration represents the beginning of a new chunk.
+
+---
+
+## Step 4 - Extract Data Using slice()
+
+```ts
+array.slice(index, index + size);
+```
+
+Examples:
+
+```ts
+array.slice(0, 4);
+```
+
+Result:
+
+```ts
+[1, 2, 3, 4];
+```
+
+```ts
+array.slice(4, 8);
+```
+
+Result:
+
+```ts
+[5, 6, 7, 8];
+```
+
+```ts
+array.slice(8, 12);
+```
+
+Result:
+
+```ts
+[9, 10];
+```
+
+---
+
+## Step 5 - Store the Chunk
+
+```ts
+chunks.push(array.slice(index, index + size));
+```
+
+Progression:
+
+```ts
+[];
+```
+
+↓
+
+```ts
+[[1, 2, 3, 4]];
+```
+
+↓
+
+```ts
 [
-  [1,2,3,4],
-  [5,6,7,8],
-  [9,10]
-]
+  [1, 2, 3, 4],
+  [5, 6, 7, 8],
+];
 ```
 
-Each inner array represents one carousel slide.
+↓
 
-This allows the Hero Carousel to display menus in groups rather than rendering all menu items at once.
+```ts
+[
+  [1, 2, 3, 4],
+  [5, 6, 7, 8],
+  [9, 10],
+];
+```
+
+---
+
+## Step 6 - Return the Final Result
+
+```ts
+return chunks;
+```
+
+The component receives a fully transformed two-dimensional array ready to be used by the Hero Carousel.
+
+---
+
+## Hero Carousel Integration
+
+```ts
+const slides = chunkArray(recommendMenus, ITEMS_PER_SLIDE);
+```
+
+Input:
+
+```ts
+[menu1, menu2, menu3, menu4, menu5, menu6, menu7, menu8, menu9, menu10];
+```
+
+Output:
+
+```ts
+[
+  [menu1, menu2, menu3, menu4],
+  [menu5, menu6, menu7, menu8],
+  [menu9, menu10],
+];
+```
+
+Each inner array becomes one carousel slide.
+
+---
+
+## Summary
+
+```txt
+T[]
+↓
+chunkArray()
+↓
+T[][]
+↓
+slides
+↓
+HeroCarousel
+↓
+HeroCardArea
+↓
+HeroCard
+```
