@@ -6,6 +6,29 @@ The `chunkArray()` utility function is responsible for splitting a large array i
 
 ---
 
+## Visual Flow
+
+```mermaid
+flowchart TD
+
+A["Source Array"]
+--> B["Loop (index += size)"]
+
+B --> C["slice(index, index + size)"]
+
+C --> D["Create Chunk"]
+
+D --> E["Push into chunks"]
+
+E --> F["Next Iteration"]
+
+F --> B
+
+B --> G["Return chunks"]
+```
+
+---
+
 ## Source Code
 
 ```ts
@@ -284,29 +307,6 @@ Output:
   [5, 6, 7, 8],
   [9, 10],
 ];
-```
-
----
-
-## Visual Flow
-
-```mermaid
-flowchart TD
-
-A["Source Array"]
---> B["Loop (index += size)"]
-
-B --> C["slice(index, index + size)"]
-
-C --> D["Create Chunk"]
-
-D --> E["Push into chunks"]
-
-E --> F["Next Iteration"]
-
-F --> B
-
-B --> G["Return chunks"]
 ```
 
 ---
