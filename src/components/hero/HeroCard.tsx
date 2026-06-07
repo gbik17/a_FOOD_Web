@@ -13,15 +13,5 @@ export default function HeroCard({ menu }: HeroCardProps) {
       <p>{menu.description}</p>
       <span>${menu.price}</span>
     </article>
-
-    // <div className="hero-mid-card">
-    //   {menus.map((menu) => (
-    //     <article key={menu.id} className="card-1-api">
-    //       <h3>{menu.name}</h3>
-    //       <h3>{menu.description}</h3>
-    //       <span>${menu.price}</span>
-    //     </article>
-    //   ))}
-    // </div>
   );
 }

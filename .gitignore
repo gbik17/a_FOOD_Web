@@ -10,7 +10,9 @@ lerna-debug.log*
 node_modules
 docs/*
 !docs/diagrams/
+!docs/developer-notes/
 !docs/diagrams/**
+!docs/developer-notes/**
 dist
 dist-ssr
 *.local
