@@ -11,37 +11,37 @@ This document explains the complete data flow of the Hero Carousel feature, star
 ```mermaid
 flowchart TD
 
-A[menu.json]
+A["menu.json"]
 
-A --> B[getMenus<br/>menuService.ts]
+A --> B["getMenus() - menuService.ts"]
 
-B --> C[HeroSection]
+B --> C["HeroSection"]
 
-C --> D[menus State]
+C --> D["menus State"]
 
-D --> E[filter tag recommend]
+D --> E["filter(tag === 'recommend')"]
 
-E --> F[recommendMenus]
+E --> F["recommendMenus"]
 
-F --> G[chunkArray]
+F --> G["chunkArray()"]
 
-G --> H[slides Menu[][]]
+G --> H["slides (2D Array)"]
 
-H --> I[currentSlide State]
+H --> I["currentSlide State"]
 
-I --> J[slides[currentSlide]]
+I --> J["slides[currentSlide]"]
 
-J --> K[HeroCardArea]
+J --> K["HeroCardArea"]
 
-K --> L[HeroCard]
+K --> L["HeroCard"]
 
-H --> M[slides.length]
+H --> M["slides.length"]
 
-M --> N[HeroCarousel]
+M --> N["HeroCarousel"]
 
-N --> O[User Click]
+N --> O["User Click"]
 
-O --> P[setCurrentSlide]
+O --> P["setCurrentSlide()"]
 
 P --> I
 ```
