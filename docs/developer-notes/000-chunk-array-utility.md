@@ -2,7 +2,27 @@
 
 ## Overview
 
-The `chunkArray()` utility function is responsible for splitting a large array into smaller arrays of a specified size. This function is used by the Hero Carousel feature to divide menu data into multiple slide groups so that only a certain number of menu cards are displayed per slide.
+At first glance, the `chunkArray()` utility function may look like a simple helper that divides a large array into several smaller arrays. While that statement is technically correct, it does not explain the real reason why this utility was created inside the project.
+
+The primary purpose of `chunkArray()` is to solve a user interface problem, not a data problem.
+
+Inside the Hero Carousel feature, menu data is retrieved from the service layer and filtered based on specific business requirements. After the filtering process is completed, the resulting data still exists as a normal one-dimensional array.
+
+For example:
+
+````ts
+[
+  menu1,
+  menu2,
+  menu3,
+  menu4,
+  menu5,
+  menu6,
+  menu7,
+  menu8,
+  menu9,
+  menu10
+]
 
 ---
 
@@ -25,7 +45,7 @@ E --> F["Next Iteration"]
 F --> B
 
 B --> G["Return chunks"]
-```
+````
 
 ---
 
