@@ -7,7 +7,7 @@ type HeroCardAreaProps = {
 
 export default function HeroCardArea({ menus }: HeroCardAreaProps) {
   return (
-    <div className="hero-mid-card">
+    <div className="hero-mid-HeroCardArea">
       {menus.map((menu) => (
         <HeroCard key={menu.id} menu={menu} />
       ))}

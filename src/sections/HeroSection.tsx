@@ -34,7 +34,9 @@ export default function HeroSection() {
       <aside className="hero-left-bar"></aside>
 
       <div className="hero-mid-bar">
+        {/* lanjutkan hero dashboard ini karena kita perlu mengurus NavBar disini */}
         <HeroDashboard />
+
         <HeroCardArea menus={slides[currentSLide] ?? []} />
         <HeroCarousel
           totalSlides={slides.length}
