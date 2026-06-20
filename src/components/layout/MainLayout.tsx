@@ -1,5 +1,4 @@
 import Footer from "./Footer";
-import Navbar from "./Navbar";
 
 type Props = {
   children: any;
@@ -8,10 +7,7 @@ type Props = {
 export default function MainLayout({ children }: Props) {
   return (
     <>
-      <Navbar />
-
       {children}
-
       <Footer />
     </>
   );
