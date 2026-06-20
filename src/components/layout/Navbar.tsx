@@ -3,32 +3,42 @@ import "../../styles/navBar.css";
 
 export default function Navbar() {
   return (
-    <>
-      <nav>
-        <ul>
-          <li>
-            <Link to={"/"}>Home</Link>
-          </li>
-          <li>
-            <Link to={"/about"}>About Us</Link>
-          </li>
-          <li>
-            <Link to={"/menu"}>Menu</Link>
-          </li>
-          <li>
-            <Link to={"/shop"}>Shop</Link>
-          </li>
-          <li>
-            <Link to={"/pages"}>Pages</Link>
-          </li>
-          <li>
-            <Link to={"/blog"}>Blog</Link>
-          </li>
-          <li>
-            <Link to={"/contact"}>Contact</Link>
-          </li>
-        </ul>
-      </nav>
-    </>
+    <nav className="navbar">
+      <ul className="nav-menu">
+        <li>
+          <Link to="/">Home</Link>
+        </li>
+
+        <li>
+          <Link to="/about">About Us</Link>
+        </li>
+
+        <li>
+          <Link to="/menu">Menu</Link>
+        </li>
+
+        <li>
+          <Link to="/shop">Shop</Link>
+        </li>
+
+        <li>
+          <Link to="/pages">Pages</Link>
+        </li>
+
+        <li>
+          <Link to="/blog">Blog</Link>
+        </li>
+
+        <li>
+          <Link to="/contact">Contact</Link>
+        </li>
+      </ul>
+
+      <div className="nav-icons">
+        <button className="icon-btn">🔍</button>
+        <button className="icon-btn">👤</button>
+        <button className="icon-btn">📞</button>
+      </div>
+    </nav>
   );
 }

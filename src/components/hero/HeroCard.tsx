@@ -1,4 +1,4 @@
-import "../../styles/heroSection.css";
+import "../../styles/heroCard.css";
 import type { Menu } from "../../types/menu";
 
 type HeroCardProps = {

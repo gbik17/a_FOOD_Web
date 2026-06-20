@@ -1,0 +1,44 @@
+/* Card Area */
+.hero-mid-HeroCardArea {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 20px;
+  justify-content: center;
+  border: 2px solid aqua;
+}
+
+.hero-mid-HeroCard {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  flex-basis: 150px;
+  position: relative;
+  border: 2px solid rgb(39, 54, 54);
+  border-radius: 10%;
+}
+
+.card-header {
+  display: flex;
+  flex-direction: row;
+}
+
+.card-header img {
+  position: absolute;
+  top: -15px;
+  left: -20px;
+  aspect-ratio: 1/1;
+  width: clamp(100px, 5vw, 80px);
+  object-fit: contain;
+}
+
+.card-header span {
+  padding: 25px 50px 50px 0;
+  margin-left: auto;
+}
+
+.card-body * {
+  margin: 0 10px;
+}

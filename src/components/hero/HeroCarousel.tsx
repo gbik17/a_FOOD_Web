@@ -1,4 +1,4 @@
-import "../../styles/heroSection.css";
+import "../../styles/heroCarousel.css";
 
 type HeroCarouselProps = {
   totalSlides: number;
