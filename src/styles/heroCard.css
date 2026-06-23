@@ -2,22 +2,26 @@
 .hero-mid-HeroCardArea {
   display: flex;
   flex-direction: row;
-  flex: 1;
   flex-wrap: wrap;
-  gap: 1rem;
+  flex-basis: 100%;
+  gap: 3rem;
   padding: 20px;
   justify-content: center;
   border: 2px solid aqua;
 }
 
+/* Hero Card class
+this class is used to style the hero card component. It is a flex container that wraps its children and has a border and border-radius. The card header contains an image and a span for the price, while the card body contains the food name, description, and star rating. The add button is positioned absolutely within the card. 
+======================================================= */
+
 .hero-mid-HeroCard {
+  position: relative;
+  flex-basis: 20%;
   display: flex;
   flex-direction: column;
-  flex: 1;
-  flex-basis: 150px;
-  position: relative;
-  border: 2px solid rgb(39, 54, 54);
-  border-radius: 10%;
+  border-radius: 15px;
+  border: 2px solid #ff2d55;
+  overflow: hidden;
 }
 
 .card-header {
@@ -41,4 +45,103 @@
 
 .card-body * {
   margin: 0 10px;
+}
+
+/* =======================================================
+   HERO CARD RED STYLE
+   ======================================================= */
+
+.hero-mid-HeroCard {
+  background-color: #ff2d55;
+  color: white;
+
+  overflow: visible;
+}
+
+/* =======================================================
+   PRICE
+   ======================================================= */
+
+.card-header span {
+  color: white;
+
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+/* =======================================================
+   IMAGE SHADOW
+   ======================================================= */
+
+.card-header img {
+  filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.25));
+}
+
+/* =======================================================
+   STAR
+   ======================================================= */
+
+.card-body p:first-child {
+  color: #ffd54f;
+
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+/* =======================================================
+   FOOD NAME
+   ======================================================= */
+
+.card-body h3 {
+  color: white;
+
+  font-size: 1.8rem;
+  font-weight: 700;
+
+  line-height: 1.2;
+}
+
+/* =======================================================
+   DESCRIPTION
+   ======================================================= */
+
+.card-body p:last-child {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* =======================================================
+   ADD BUTTON
+   ======================================================= */
+
+.add-button {
+  position: absolute;
+
+  right: 15px;
+  bottom: 15px;
+
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 50%;
+
+  background-color: #1f2a44;
+
+  color: white;
+
+  font-size: 1.5rem;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.add-button:hover {
+  transform: scale(1.1);
 }

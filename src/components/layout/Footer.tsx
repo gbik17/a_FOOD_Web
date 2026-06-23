@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <>
       <footer>
-        <p>Food Heaven Credit By Gustut Biksa</p>
+        <p>Food Heaven Slicing Credit By Gustut Biksa</p>
       </footer>
     </>
   );

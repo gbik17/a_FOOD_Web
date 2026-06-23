@@ -1,0 +1,201 @@
+/* =======================================================
+   OUR STORY SECTION
+   ======================================================= */
+
+.ourStory {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 4rem;
+
+  padding: 4rem 2rem;
+}
+
+/* =======================================================
+   LEFT SIDE - IMAGE AREA
+   ======================================================= */
+
+.ourStory-image {
+  flex: 1;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ourStory-image img {
+  width: auto;
+  inline-size: 100%;
+
+  object-fit: contain;
+}
+
+/* =======================================================
+   RIGHT SIDE - CONTENT AREA
+   ======================================================= */
+
+.ourStory-content {
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 1.5rem;
+}
+
+/* =======================================================
+   SECTION SUBTITLE
+   ======================================================= */
+
+.ourStory-content > h3:first-child {
+  color: #ff4d6d;
+
+  font-size: 1.5rem;
+  font-style: italic;
+  font-weight: 400;
+
+  margin: 0;
+}
+
+/* =======================================================
+   MAIN TITLE
+   ======================================================= */
+
+.ourStory-content > h2 {
+  font-size: clamp(2rem, 3vw, 3.5rem);
+
+  line-height: 1.2;
+  font-weight: 700;
+
+  margin: 0;
+}
+
+/* =======================================================
+   DESCRIPTION
+   ======================================================= */
+
+.ourStory-content > p {
+  color: #555;
+
+  line-height: 1.8;
+
+  margin: 0;
+}
+
+/* =======================================================
+   DIVIDER LINE
+   ======================================================= */
+
+.ourStory-content hr {
+  border: none;
+
+  height: 2px;
+
+  background-color: #ff4d6d;
+}
+
+/* =======================================================
+   BOTTOM AREA
+   BUTTON + EXPERIENCE
+   ======================================================= */
+
+.ourStory-footer {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 2rem;
+}
+
+/* =======================================================
+   DISCOVER BUTTON
+   ======================================================= */
+
+.ourStory-footer button {
+  border: none;
+
+  background-color: #ff4d6d;
+  color: white;
+
+  padding: 1rem 2rem;
+
+  border-radius: 8px;
+
+  cursor: pointer;
+
+  font-weight: 600;
+
+  transition: 0.3s;
+}
+
+.ourStory-footer button:hover {
+  transform: translateY(-2px);
+}
+
+/* =======================================================
+   EXPERIENCE AREA
+   ======================================================= */
+
+.experience {
+  display: flex;
+
+  align-items: center;
+
+  gap: 1rem;
+}
+
+/* =======================================================
+   BIG NUMBER
+   ======================================================= */
+
+.experience h1 {
+  color: #ff4d6d;
+
+  font-size: 4rem;
+  font-weight: 700;
+
+  margin: 0;
+}
+
+/* =======================================================
+   YEARS OF EXPERIENCE TEXT
+   ======================================================= */
+
+.experience h2,
+.experience h3 {
+  margin: 0;
+}
+
+.experience h3 {
+  color: #ff4d6d;
+
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.experience h2 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+/* =======================================================
+   RESPONSIVE
+   ======================================================= */
+
+/* @media (max-width: 768px) {
+  .ourStory {
+    flex-direction: column;
+
+    text-align: center;
+  }
+
+  .ourStory-footer {
+    flex-direction: column;
+  }
+
+  .experience {
+    justify-content: center;
+  }
+} */

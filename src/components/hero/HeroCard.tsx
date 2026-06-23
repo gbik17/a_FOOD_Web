@@ -18,6 +18,7 @@ export default function HeroCard({ menu }: HeroCardProps) {
         <h3>{menu.name}</h3>
         <p>{menu.description}</p>
       </div>
+      <div className="add-button">+</div>
     </article>
   );
 }

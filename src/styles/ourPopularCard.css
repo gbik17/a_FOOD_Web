@@ -1,0 +1,57 @@
+/* =======================================================
+   POPULAR CARD
+   ======================================================= */
+
+.ourPopularCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+  flex: 1 1 250px;
+  min-height: 350px;
+  padding: 2rem;
+  background-color: #fff5f7;
+  transition: 0.3s;
+}
+
+/* =======================================================
+   ACTIVE CARD EFFECT
+   ======================================================= */
+
+.ourPopularCard:hover {
+  background-color: #ff2d55;
+
+  color: white;
+}
+
+/* =======================================================
+   IMAGE
+   ======================================================= */
+
+.ourPopularCard img {
+  width: 70px;
+
+  align-self: center;
+
+  object-fit: contain;
+}
+
+/* =======================================================
+   TITLE
+   ======================================================= */
+
+.ourPopularCard h3 {
+  margin: 0;
+
+  font-size: 2rem;
+}
+
+/* =======================================================
+   DESCRIPTION
+   ======================================================= */
+
+.ourPopularCard p {
+  margin: 0;
+
+  line-height: 1.6;
+}

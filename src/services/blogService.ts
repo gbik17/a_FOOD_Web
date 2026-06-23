@@ -1,10 +1,10 @@
-import staffs from "../mocks/staff.json";
-import type { Staff } from "../types/staff";
+import blogs from "../mocks/blogs.json";
+import type { Blog } from "../types/blogs";
 
-export async function getStaffs(): Promise<Staff[]> {
+export async function getBlogs(): Promise<Blog[]> {
   return new Promise((resolve) => {
     setTimeout(() => {
-      resolve(staffs as Staff[]);
+      resolve(blogs as Blog[]);
     }, 500);
   });
 }

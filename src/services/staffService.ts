@@ -1,9 +1,10 @@
 import staffs from "../mocks/staff.json";
+import type { Staff } from "../types/staff";
 
-export async function getMenus() {
-  return new Promise((resolve, reject) => {
+export async function getStaffs(): Promise<Staff[]> {
+  return new Promise((resolve) => {
     setTimeout(() => {
-      resolve(staffs);
+      resolve(staffs as Staff[]);
     }, 500);
   });
 }

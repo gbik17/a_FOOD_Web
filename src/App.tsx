@@ -1,13 +1,13 @@
 import { BrowserRouter, Route, Routes } from "react-router";
 import MainLayout from "./components/layout/MainLayout";
-import HeroSection from "./sections/HeroSection";
+import DashboardPage from "./pages/DashboardPage";
 
 function App() {
   return (
     <BrowserRouter>
       <MainLayout>
         <Routes>
-          <Route path="/" element={<HeroSection />} />
+          <Route path="/" element={<DashboardPage />} />
           {/* <Route path='/about' element = {<About/>} /> */}
         </Routes>
       </MainLayout>

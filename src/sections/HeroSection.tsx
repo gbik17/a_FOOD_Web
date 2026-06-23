@@ -38,7 +38,6 @@ export default function HeroSection() {
   (1 items per slide) using utils chunkArray() */
   const ITEMS_PER_SLIDE_2 = 1;
   const slides2 = chunkArray(featuredMenus, ITEMS_PER_SLIDE_2);
-  console.log(slides2);
 
   // create auto slider for the slide
   useEffect(() => {
@@ -47,7 +46,6 @@ export default function HeroSection() {
         return (prev + 1) % slides2.length;
       });
     }, 3000);
-
     return () => clearInterval(interval);
   }, [slides2.length]);
 
