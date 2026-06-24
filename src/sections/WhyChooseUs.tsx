@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import "../styles/whyChooseUs.css";
 import type { Menu } from "../types/menu";
 import { getMenus } from "../services/menuService";
+import { chunkArray } from "../utils/chunkArray";
 
 export default function WhyChooseUs() {
   const [menus, setMenus] = useState<Menu[]>([]);
@@ -16,7 +17,26 @@ export default function WhyChooseUs() {
     loadMenus();
   }, []);
 
-  // Filter Menus Cat
+  // Filter Menus Category === new-menu
+  const filterMenusNew = menus.filter((menu) => menu.tag === "new-menu");
+
+  const ITEM_PER_SLIDE = 1;
+  const newSlides = chunkArray(filterMenusNew, ITEM_PER_SLIDE);
+
+  // create auto slider for the Category Slider
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlideMenu((prev) => {
+        return (prev + 1) % newSlides.length;
+      });
+    }, 10000);
+    return () => clearInterval(interval);
+  }, [newSlides.length]);
+
+  const getNewMenusSlide = newSlides[currentSlideMenu]?.[0];
+
+  console.log(filterMenusNew);
+
   return (
     <section className="whyChooseUs">
       {/* ===================================================
@@ -24,7 +44,9 @@ export default function WhyChooseUs() {
       =================================================== */}
       <div className="whyChooseUs-content">
         {/* LEFT IMAGE */}
-        <div className="whyChooseUs-image">{/* <img src={} /> */}</div>
+        <div className="whyChooseUs-image">
+          <img src={getNewMenusSlide?.image} />
+        </div>
 
         {/* RIGHT CONTENT */}
         <div className="whyChooseUs-details">
@@ -33,7 +55,7 @@ export default function WhyChooseUs() {
             <h3 className="whyChooseUs-subtitle">Why Choose Us</h3>
 
             <h2 className="whyChooseUs-title">
-              {/* We Provide Best {} From Our Kitchen */}
+              We Provide Best {getNewMenusSlide?.name} From Our Kitchen
             </h2>
           </header>
 
@@ -41,15 +63,12 @@ export default function WhyChooseUs() {
           <div className="whyChooseUs-features">
             {/* FEATURE 1 */}
             <article className="featureCard">
-              <div className="featureIcon">🍗</div>
+              <div className="featureIcon">🍽</div>
 
               <div className="featureContent">
-                <h3>Fresh Chicken</h3>
+                <h3>{getNewMenusSlide?.name}</h3>
 
-                <p>
-                  It is a long established fact that a reader will content
-                  here', making English.
-                </p>
+                <p>{getNewMenusSlide?.description}</p>
               </div>
             </article>
 
@@ -76,7 +95,7 @@ export default function WhyChooseUs() {
 
       <aside className="experienceBanner">
         <div className="experienceBanner-image">
-          <img src="" alt="Food Dish" />
+          <img src={getNewMenusSlide?.image} />
         </div>
 
         <div className="experienceBanner-content">
