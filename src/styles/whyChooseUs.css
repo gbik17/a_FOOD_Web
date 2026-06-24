@@ -1,0 +1,240 @@
+/* =======================================================
+   WHY CHOOSE US SECTION
+   ======================================================= */
+
+.whyChooseUs {
+  display: flex;
+  flex-direction: column;
+
+  gap: 4rem;
+
+  padding: 4rem 2rem;
+}
+
+/* =======================================================
+   TOP CONTENT
+   ======================================================= */
+
+.whyChooseUs-content {
+  display: flex;
+  flex-wrap: wrap;
+
+  align-items: center;
+
+  background-color: #1f2337;
+
+  padding: 2rem;
+
+  gap: 3rem;
+
+  overflow: hidden;
+}
+
+/* =======================================================
+   LEFT IMAGE
+   ======================================================= */
+
+.whyChooseUs-image {
+  flex: 1 1 400px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.whyChooseUs-image img {
+  width: 100%;
+  max-width: 700px;
+
+  object-fit: contain;
+}
+
+/* =======================================================
+   RIGHT CONTENT
+   ======================================================= */
+
+.whyChooseUs-details {
+  flex: 1 1 350px;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 2rem;
+
+  color: white;
+}
+
+/* =======================================================
+   HEADER
+   ======================================================= */
+
+.whyChooseUs-header {
+  display: flex;
+  flex-direction: column;
+
+  gap: 1rem;
+}
+
+.whyChooseUs-subtitle {
+  color: #ffffff;
+
+  font-style: italic;
+
+  font-size: clamp(1.2rem, 2vw, 2rem);
+
+  margin: 0;
+}
+
+.whyChooseUs-title {
+  font-size: clamp(2rem, 4vw, 4rem);
+
+  line-height: 1.2;
+
+  margin: 0;
+}
+
+/* =======================================================
+   FEATURE LIST
+   ======================================================= */
+
+.whyChooseUs-features {
+  display: flex;
+  flex-direction: column;
+
+  gap: 2rem;
+}
+
+/* =======================================================
+   FEATURE CARD
+   ======================================================= */
+
+.featureCard {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 1.5rem;
+}
+
+.featureIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  flex: 0 0 70px;
+
+  aspect-ratio: 1/1;
+
+  border-radius: 50%;
+
+  background-color: #ff2d55;
+
+  font-size: 2rem;
+}
+
+.featureContent {
+  display: flex;
+  flex-direction: column;
+
+  gap: 0.5rem;
+}
+
+.featureContent h3 {
+  margin: 0;
+
+  font-size: clamp(1.5rem, 2vw, 2.5rem);
+}
+
+.featureContent p {
+  margin: 0;
+
+  line-height: 1.7;
+
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* =======================================================
+   EXPERIENCE BANNER
+   ======================================================= */
+
+.experienceBanner {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  align-items: center;
+
+  gap: 2rem;
+
+  background-color: #ff2d55;
+
+  padding: 2rem;
+
+  border-radius: 1rem;
+
+  width: 100%;
+}
+
+/* =======================================================
+   BANNER IMAGE
+   ======================================================= */
+
+.experienceBanner-image {
+  flex: 0 1 100px;
+}
+
+.experienceBanner-image img {
+  width: 100%;
+
+  max-width: 100px;
+
+  aspect-ratio: 1/1;
+
+  object-fit: cover;
+
+  border-radius: 50%;
+}
+
+/* =======================================================
+   BANNER CONTENT
+   ======================================================= */
+
+.experienceBanner-content {
+  flex: 1 1 300px;
+
+  color: white;
+}
+
+.experienceBanner-content h2 {
+  margin: 0;
+
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+.experienceBanner-content p {
+  margin-top: 0.5rem;
+
+  line-height: 1.6;
+}
+
+/* =======================================================
+   BANNER BUTTON
+   ======================================================= */
+
+.experienceBanner-button {
+  flex: 0 1 auto;
+
+  border: none;
+
+  padding: 1rem 2rem;
+
+  border-radius: 0.75rem;
+
+  background-color: white;
+
+  color: #ff2d55;
+
+  font-weight: 700;
+
+  cursor: pointer;
+}
