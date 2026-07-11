@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
-import type { Staff } from "../types/staff";
-import { getStaffs } from "../services/staffService";
-import { chunkArray } from "../utils/chunkArray";
-import TeamMemberCardArea from "../components/team/TeamMemberCardArea";
-import TeamMemberCarousel from "../components/team/TeamMemberCarousel";
-import { groupByDepartment } from "../utils/groupByDepartment";
+import type { Staff } from "../../types/staff";
+import { getStaffs } from "../../services/staffService";
+import { chunkArray } from "../../utils/chunkArray";
+import TeamMemberCardArea from "../../components/team/TeamMemberCardArea";
+import TeamMemberCarousel from "../../components/team/TeamMemberCarousel";
+import { groupByDepartment } from "../../utils/groupByDepartment";
 import "../styles/teamMember.css";
 
 export default function TeamMember() {

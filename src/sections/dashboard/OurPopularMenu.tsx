@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import type { Menu } from "../types/menu";
-import { getMenus } from "../services/menuService";
-import { chunkArray } from "../utils/chunkArray";
-import OurPopularCardArea from "../components/popular/OurPopularCardArea";
+import type { Menu } from "../../types/menu";
+import { getMenus } from "../../services/menuService";
+import { chunkArray } from "../../utils/chunkArray";
+import OurPopularCardArea from "../../components/popular/OurPopularCardArea";
 import "../styles/ourPopularMenu.css";
 
 export default function OurPopularMenu() {

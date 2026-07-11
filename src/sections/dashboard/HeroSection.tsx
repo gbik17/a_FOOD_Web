@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
-import HeroCarousel from "../components/hero/HeroCarousel";
-import HeroDashboard from "../components/hero/HeroDashboard";
+import HeroCarousel from "../../components/hero/HeroCarousel";
+import HeroDashboard from "../../components/hero/HeroDashboard";
 import { Link } from "react-router";
-import type { Menu } from "../types/menu";
-import { getMenus } from "../services/menuService";
+import type { Menu } from "../../types/menu";
+import { getMenus } from "../../services/menuService";
 import "../styles/heroSection.css";
-import { chunkArray } from "../utils/chunkArray";
-import HeroCardArea from "../components/hero/HeroCardArea";
+import { chunkArray } from "../../utils/chunkArray";
+import HeroCardArea from "../../components/hero/HeroCardArea";
 
 export default function HeroSection() {
   const [menus, setMenus] = useState<Menu[]>([]);

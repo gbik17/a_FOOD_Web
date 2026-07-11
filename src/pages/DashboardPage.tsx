@@ -1,8 +1,9 @@
-import HeroSection from "../sections/HeroSection";
-import OurPopularMenu from "../sections/OurPopularMenu";
-import OurStorySection from "../sections/OurStorySection";
-import TeamMember from "../sections/TeamMember";
-import WhyChooseUs from "../sections/WhyChooseUs";
+import Footer from "../components/layout/Footer";
+import HeroSection from "../sections/dashboard/HeroSection";
+import OurPopularMenu from "../sections/dashboard/OurPopularMenu";
+import OurStorySection from "../sections/dashboard/OurStorySection";
+import TeamMember from "../sections/dashboard/TeamMember";
+import WhyChooseUs from "../sections/dashboard/WhyChooseUs";
 
 export default function DashboardPage() {
   return (
@@ -12,6 +13,7 @@ export default function DashboardPage() {
       <OurPopularMenu />
       <WhyChooseUs />
       <TeamMember />
+      <Footer />
     </>
   );
 }

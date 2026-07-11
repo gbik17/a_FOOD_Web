@@ -5,10 +5,5 @@ type Props = {
 };
 
 export default function MainLayout({ children }: Props) {
-  return (
-    <>
-      {children}
-      <Footer />
-    </>
-  );
+  return <>{children}</>;
 }

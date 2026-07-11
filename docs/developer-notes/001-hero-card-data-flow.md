@@ -138,7 +138,7 @@ React Re-render
 Initially:
 
 ```ts
-menus = []
+menus = [];
 ```
 
 After the service resolves:
@@ -162,11 +162,7 @@ For that reason, not every menu item should appear inside the carousel.
 The application performs a filtering process:
 
 ```ts
-const recommendMenus =
-  menus.filter(
-    (menu) =>
-      menu.tag === "recommend"
-  );
+const recommendMenus = menus.filter((menu) => menu.tag === "recommend");
 ```
 
 This statement creates a brand new array containing only recommended menu items.
@@ -196,7 +192,7 @@ The original `menus` state remains unchanged.
 Instead, a new collection called:
 
 ```ts
-recommendMenus
+recommendMenus;
 ```
 
 is created.
@@ -214,18 +210,7 @@ The data exists as a one-dimensional array.
 Example:
 
 ```ts
-[
-  menu1,
-  menu2,
-  menu3,
-  menu4,
-  menu5,
-  menu6,
-  menu7,
-  menu8,
-  menu9,
-  menu10
-]
+[menu1, menu2, menu3, menu4, menu5, menu6, menu7, menu8, menu9, menu10];
 ```
 
 However, the Hero Carousel displays data in groups.
@@ -236,8 +221,8 @@ The UI expects:
 [
   [menu1, menu2, menu3, menu4],
   [menu5, menu6, menu7, menu8],
-  [menu9, menu10]
-]
+  [menu9, menu10],
+];
 ```
 
 This transformation is performed using:
@@ -245,11 +230,7 @@ This transformation is performed using:
 ```ts
 const ITEMS_PER_SLIDE = 4;
 
-const slides =
-  chunkArray(
-    recommendMenus,
-    ITEMS_PER_SLIDE
-  );
+const slides = chunkArray(recommendMenus, ITEMS_PER_SLIDE);
 ```
 
 The result is a two-dimensional array.
@@ -267,10 +248,7 @@ After slide groups are created, the application needs a way to determine which s
 This responsibility belongs to:
 
 ```tsx
-const [
-  currentSlide,
-  setCurrentSlide
-] = useState(0);
+const [currentSlide, setCurrentSlide] = useState(0);
 ```
 
 Initially:
@@ -282,7 +260,7 @@ currentSlide = 0
 Meaning:
 
 ```ts
-slides[0]
+slides[0];
 ```
 
 is displayed.
@@ -296,7 +274,7 @@ currentSlide = 1
 Then:
 
 ```ts
-slides[1]
+slides[1];
 ```
 
 is displayed.
@@ -312,11 +290,7 @@ This makes state management lightweight and efficient.
 Once the active slide is known, the component selects the corresponding chunk.
 
 ```tsx
-<HeroCardArea
-  menus={
-    slides[currentSlide] ?? []
-  }
-/>
+<HeroCardArea menus={slides[currentSlide] ?? []} />
 ```
 
 This statement is extremely important.
@@ -324,7 +298,7 @@ This statement is extremely important.
 Remember:
 
 ```ts
-slides
+slides;
 ```
 
 contains multiple groups.
@@ -333,10 +307,10 @@ Example:
 
 ```ts
 [
-  [1,2,3,4],
-  [5,6,7,8],
-  [9,10]
-]
+  [1, 2, 3, 4],
+  [5, 6, 7, 8],
+  [9, 10],
+];
 ```
 
 If:
@@ -348,7 +322,7 @@ currentSlide = 0
 The component receives:
 
 ```ts
-[1,2,3,4]
+[1, 2, 3, 4];
 ```
 
 If:
@@ -360,7 +334,7 @@ currentSlide = 1
 The component receives:
 
 ```ts
-[5,6,7,8]
+[5, 6, 7, 8];
 ```
 
 The fallback:
@@ -388,7 +362,7 @@ type HeroCardAreaProps = {
 This means the component receives:
 
 ```ts
-[menu1, menu2, menu3, menu4]
+[menu1, menu2, menu3, menu4];
 ```
 
 rather than:
@@ -396,19 +370,14 @@ rather than:
 ```ts
 [
   [menu1, menu2, menu3, menu4],
-  [menu5, menu6, menu7, menu8]
-]
+  [menu5, menu6, menu7, menu8],
+];
 ```
 
 The component loops through every menu item.
 
 ```tsx
-menus.map((menu) => (
-  <HeroCard
-    key={menu.id}
-    menu={menu}
-  />
-))
+menus.map((menu) => <HeroCard key={menu.id} menu={menu} />);
 ```
 
 Every iteration creates a new HeroCard component.
@@ -504,7 +473,7 @@ No manual button creation is required.
 ## currentSlide
 
 ```tsx
-currentSlide={currentSlide}
+currentSlide = { currentSlide };
 ```
 
 This tells the carousel which slide is currently active.
@@ -512,7 +481,7 @@ This tells the carousel which slide is currently active.
 The active button receives a different CSS class.
 
 ```tsx
-currentSlide === index
+currentSlide === index;
 ```
 
 This creates visual feedback for users.
@@ -522,7 +491,7 @@ This creates visual feedback for users.
 ## setCurrentSlide
 
 ```tsx
-setCurrentSlide={setCurrentSlide}
+setCurrentSlide = { setCurrentSlide };
 ```
 
 This function allows the carousel to update the active slide.
@@ -562,7 +531,7 @@ HeroSection Re-render
 Now:
 
 ```ts
-slides[1]
+slides[1];
 ```
 
 becomes the active slide.

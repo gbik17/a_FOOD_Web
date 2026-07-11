@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import "../styles/whyChooseUs.css";
-import type { Menu } from "../types/menu";
-import { getMenus } from "../services/menuService";
-import { chunkArray } from "../utils/chunkArray";
+import type { Menu } from "../../types/menu";
+import { getMenus } from "../../services/menuService";
+import { chunkArray } from "../../utils/chunkArray";
 
 export default function WhyChooseUs() {
   const [menus, setMenus] = useState<Menu[]>([]);

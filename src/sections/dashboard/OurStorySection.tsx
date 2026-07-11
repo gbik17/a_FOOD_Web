@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import type { Blog } from "../types/blogs";
-import { getBlogs } from "../services/blogService";
-import { chunkArray } from "../utils/chunkArray";
+import type { Blog } from "../../types/blogs";
+import { getBlogs } from "../../services/blogService";
+import { chunkArray } from "../../utils/chunkArray";
 import "../styles/ourStory.css";
 
 export default function OurStorySection() {
