@@ -1,7 +1,6 @@
-// import
-
 import type { Staff } from "../../types/staff";
 import TeamMemberCard from "./TeamMemberCard";
+import "../../styles/teamMemberCardArea.css";
 
 type TeamMemberCardArea = {
   staff: Staff[];

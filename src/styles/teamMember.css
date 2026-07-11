@@ -1,0 +1,42 @@
+/* =======================================================
+   TEAM MEMBER SECTION
+   ======================================================= */
+
+.teamMember {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+
+  padding: clamp(2rem, 4vw, 5rem);
+}
+
+/* =======================================================
+   HEADER
+   ======================================================= */
+
+.teamMember-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 0.8rem;
+}
+
+.teamMember-subtitle {
+  margin: 0;
+
+  color: #ff4266;
+
+  font-style: italic;
+  font-weight: 400;
+
+  font-size: clamp(1.2rem, 2vw, 2rem);
+}
+
+.teamMember-title {
+  margin: 0;
+
+  text-align: center;
+
+  font-size: clamp(2rem, 4vw, 4rem);
+}

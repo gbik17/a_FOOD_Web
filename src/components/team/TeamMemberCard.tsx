@@ -1,6 +1,5 @@
-// import
-
 import type { Staff } from "../../types/staff";
+import "../../styles/teamMemberCard.css";
 
 type TeamMemberCardProps = {
   staff: Staff;

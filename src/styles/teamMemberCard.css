@@ -1,0 +1,161 @@
+/* =======================================================
+   TEAM CARD
+   ======================================================= */
+
+.teamCard {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+
+  flex: 1 1 240px;
+
+  width: 100%;
+  max-width: 290px;
+
+  padding: clamp(2rem, 3vw, 3rem);
+
+  background: #fff;
+
+  border-radius: 14px;
+
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+
+  position: relative;
+
+  overflow: visible;
+
+  transition: 0.3s;
+}
+
+.teamCard:hover {
+  background: #ff2958;
+
+  color: white;
+
+  transform: translateY(-6px);
+}
+
+/* =======================================================
+   IMAGE
+   ======================================================= */
+
+.teamCard-image {
+  width: 100%;
+
+  display: flex;
+
+  justify-content: center;
+
+  margin-top: -5rem;
+}
+
+.teamCard-image img {
+  width: 100%;
+
+  max-width: 170px;
+
+  aspect-ratio: 1/1;
+
+  border-radius: 50%;
+
+  object-fit: cover;
+
+  border: 2px solid #ff4266;
+
+  background: #ececec;
+}
+
+/* =======================================================
+   CONTENT
+   ======================================================= */
+
+.teamCard-content {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  gap: 0.4rem;
+
+  margin-top: 1.5rem;
+
+  text-align: center;
+}
+
+.teamCard-name {
+  margin: 0;
+
+  font-size: clamp(1.2rem, 2vw, 1.8rem);
+}
+
+.teamCard-role {
+  margin: 0;
+
+  font-size: 0.95rem;
+
+  font-weight: 600;
+
+  color: #555;
+}
+
+.teamCard:hover .teamCard-role {
+  color: white;
+}
+
+/* =======================================================
+   DIVIDER
+   ======================================================= */
+
+.teamCard-social {
+  width: 100%;
+
+  display: flex;
+
+  justify-content: center;
+
+  gap: 0.8rem;
+
+  margin-top: 1.8rem;
+
+  padding-top: 1.5rem;
+
+  border-top: 1px solid #e5e5e5;
+}
+
+.teamCard:hover .teamCard-social {
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* =======================================================
+   SOCIAL BUTTON
+   ======================================================= */
+
+.teamCard-social button {
+  width: 42px;
+
+  aspect-ratio: 1;
+
+  border-radius: 50%;
+
+  border: 1px solid #d8d8d8;
+
+  background: white;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.teamCard:hover .teamCard-social button {
+  background: transparent;
+
+  border-color: white;
+
+  color: white;
+}
+
+.teamCard-social button:hover {
+  transform: scale(1.1);
+}
