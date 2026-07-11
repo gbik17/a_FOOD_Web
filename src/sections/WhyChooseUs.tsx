@@ -35,8 +35,6 @@ export default function WhyChooseUs() {
 
   const getNewMenusSlide = newSlides[currentSlideMenu]?.[0];
 
-  console.log(filterMenusNew);
-
   return (
     <section className="whyChooseUs">
       {/* ===================================================

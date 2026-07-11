@@ -1,6 +1,7 @@
 import HeroSection from "../sections/HeroSection";
 import OurPopularMenu from "../sections/OurPopularMenu";
 import OurStorySection from "../sections/OurStorySection";
+import TeamMember from "../sections/TeamMember";
 import WhyChooseUs from "../sections/WhyChooseUs";
 
 export default function DashboardPage() {
@@ -10,6 +11,7 @@ export default function DashboardPage() {
       <OurStorySection />
       <OurPopularMenu />
       <WhyChooseUs />
+      <TeamMember />
     </>
   );
 }
